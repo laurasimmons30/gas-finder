@@ -1,0 +1,19 @@
+<div class="row">  
+  <div class="large-12">
+    <% collection_select(:car, :year, @year, :prompt => true) %>
+    <% binding.pry %>
+    
+    <%= form_for @car do |f| %>
+      <%= f.label :year %>
+      <%= f.text_field :year %>
+
+      <%= f.label :make %>
+      <%= f.text_area :make %>
+
+      <%= f.label :model %>
+      <%= f.text_area :model %>
+
+      <%= f.submit "Add" %>
+    <% end %>
+  </div>
+</div>
