@@ -5,10 +5,14 @@ class CarsController < ApplicationController
   def new
     @car = Car.new
     @fuelecon = Fuelecon.new
-    @year = HTTParty.get(@fuelecon.year)
-    @make = HTTParty.get(@fuelecon.make(@year))
-    @model = HTTParty.get(@fuelecon.model(@year,@make))
+    year = HTTParty.get(@fuelecon.year)
+    @years = year["menuItems"]["menuItem"].map { |year|
+      year["value"]
+    }
+  end
 
+  def ajax_make
+    binding.pry
   end
 
   def create
