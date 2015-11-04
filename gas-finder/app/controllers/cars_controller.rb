@@ -12,7 +12,15 @@ class CarsController < ApplicationController
   end
 
   def ajax_make
-    binding.pry
+    @fuelecon = Fuelecon.new
+    make = HTTParty.get(@fuelecon.make(params['year']))
+    @makes = make["menuItems"]["menuItem"].map { |make|
+      make["value"]
+    }
+
+    respond_to do |format|
+      format.js { render 'car_makes.js.erb' }
+    end
   end
 
   def create
