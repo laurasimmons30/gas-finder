@@ -7,12 +7,13 @@ Rails.application.routes.draw do
 
   # Example of regular route:
      get 'cars/ajax_make/:year' => 'cars#ajax_make'
+     get 'cars/ajax_model/:year/:make' => 'cars#ajax_model'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-     resources :cars, except: [:destroy, :show]
+     resources :cars, except: [:destroy]
 
   # Example resource route with options:
   #   resources :products do
