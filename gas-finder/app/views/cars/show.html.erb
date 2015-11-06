@@ -1,1 +1,23 @@
-  <%= binding.pry %>
+<table>
+  <thead>
+    <tr>
+      <th><%= @car.year %></th>
+      <th><%= @car.make %></th>
+      <th><%= @car.model %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <div class='car_stats' %>
+        <td>City MPG</td> 
+        <td>Highway MPG</td>    
+        <td>Overall Average MPG</td>    
+      </div>
+    </tr>
+    <tr>
+       <td><%= @car.city_mpg %></td>
+       <td><%= @car.highway_mpg %></td>
+       <td><%= @car.avg_mpg %></td>
+    </tr>
+  </body>
+</table>

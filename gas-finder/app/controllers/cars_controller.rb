@@ -50,7 +50,7 @@ class CarsController < ApplicationController
         make: params["make"], 
         model: params["model"], 
         city_mpg: car_stats[:city_mpg], 
-        highway_mgp: car_stats[:highway_mpg], 
+        highway_mpg: car_stats[:highway_mpg], 
         avg_mpg: car_stats[:avg_mpg]
         )
       # "city08U", "highway08U", 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103021348) do
+ActiveRecord::Schema.define(version: 20151105232415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 20151103021348) do
     t.integer "year",        null: false
     t.string  "make",        null: false
     t.string  "model",       null: false
-    t.integer "city_mpg"
-    t.integer "highway_mgp"
-    t.integer "avg_mpg"
+    t.float   "city_mpg"
+    t.float   "highway_mpg"
+    t.float   "avg_mpg"
   end
 
   create_table "trips", force: :cascade do |t|

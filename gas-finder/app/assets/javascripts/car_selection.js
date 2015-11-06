@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   $(document).on('change', '#make',function(){
     $.ajax({
-      url: 'cars/ajax_model/' + $('#year').val() + '/' + $('#make').val()
+      url: '/cars/ajax_model/' + $('#year').val() + '/' + $('#make').val()
     })
   });
 });
